@@ -4,9 +4,13 @@
 [Front End Mentor Challenge]() |
 [All my Front End Mentor Solutions](https://github.com/v24dao/Front-End-Mentor-Challenges)
 
-### What I've Learned:
+### Main takeaways:
 
-#### 1.
+#### 1. Semantics
+
+I changed the `card_title` from a `h1` to a `h3`, since
+
+#### 2.
 
 Note: Mention the challenges that arose with creating buttons with the a/link tag.
 
