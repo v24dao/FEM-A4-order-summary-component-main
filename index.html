@@ -15,6 +15,18 @@
     <title>Frontend Mentor | Order summary card</title>
 
     <style>
+      /* Custom Fonts and Colours */
+      @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+      :root {
+        --paleBlue: hsl(225, 100%, 94%);
+        --brightBlue: hsl(245, 75%, 52%);
+        --veryPaleBlue: hsl(225, 100%, 98%);
+        --desaturatedBlue: hsl(224, 23%, 55%);
+        --darkBlue: hsl(223, 47%, 23%);
+        --roundedEdges: 1rem;
+      }
+
       /* Base Reset */
       *,
       *::before,
@@ -30,10 +42,14 @@
 
       html {
         font-size: 62.5%;
+        font-family: 'Karla', sans-serif;
       }
 
       body {
         min-height: 100vh;
+        display: grid;
+        align-items: center;
+        background-color: var(--paleBlue);
       }
 
       img,
@@ -43,6 +59,106 @@
         display: block;
         max-width: 100%;
       }
+
+      /* Text */
+      h1 {
+        font-size: 3rem;
+        font-weight: 900;
+        padding-bottom: 1rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: -0.15rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+        color: var(--desaturatedBlue);
+      }
+
+      /* Components */
+      .card {
+        max-width: 36rem;
+        width: 100%;
+        margin: 0 auto;
+        background-color: white;
+        text-align: center;
+        border-radius: var(--roundedEdges);
+        overflow: hidden;
+      }
+
+      .card__body {
+        padding: 3rem;
+      }
+
+      .price-section {
+        display: flex;
+        background-color: var(--veryPaleBlue);
+        padding: 2rem;
+        margin: 2rem 0;
+        align-items: center;
+        border-radius: var(--roundedEdges);
+      }
+
+      .price-section-middle {
+        padding-left: 2rem;
+      }
+
+      .change-button {
+        /* This pushes it to the right of it's parent container */
+        margin-left: auto;
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+
+      .change-button:hover {
+        color: var(--desaturatedBlue);
+        text-decoration: none;
+      }
+
+      .change-button:hover .payment-button {
+        font-size: 1.6rem;
+        font-weight: 700;
+        background-color: var(--brightBlue);
+        padding: 1.6rem;
+        margin: 2rem 0;
+        border-radius: var(--roundedEdges);
+      }
+
+      .payment-button {
+        color: var(--paleBlue);
+        text-decoration: none;
+        background-color: var(--brightBlue);
+        padding: 1.6rem 0;
+        margin: 1rem 0;
+        width: 100%;
+        border-radius: var(--roundedEdges);
+        border: none;
+        font-size: 1.6rem;
+        font-weight: 700;
+        display: inline-block;
+      }
+
+      .payment-button:hover {
+        background-color: var(--desaturatedBlue);
+        cursor: pointer;
+      }
+
+      .cancel-button {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: var(--desaturatedBlue);
+        display: block;
+        padding: 2rem;
+      }
+
+      .cancel-button:hover {
+        color: var(--darkBlue);
+      }
     </style>
   </head>
   <body>
@@ -50,23 +166,23 @@
       <div class="card__image">
         <img src="images/illustration-hero.svg" alt="" />
       </div>
-      <h1 class="card__title">Order Summary</h1>
-      <p class="card__paragraph">
-        You can now listen to millions of songs, audiobooks, and podcasts on any
-        device anywhere you like!
-      </p>
-      <div class="price-section">
-        <img class="music-icon" src="images/icon-music.svg" alt="" />
-        <div class="price-section-middle">
-          <h2>Annual Plan</h2>
-          <p>$59.99/year</p>
+      <div class="card__body">
+        <h1 class="card__title">Order Summary</h1>
+        <p class="card__paragraph">
+          You can now listen to millions of songs, audiobooks, and podcasts on
+          any device anywhere you like!
+        </p>
+        <div class="price-section">
+          <img class="music-icon" src="images/icon-music.svg" alt="" />
+          <div class="price-section-middle">
+            <h2>Annual Plan</h2>
+            <p>$59.99/year</p>
+          </div>
+          <a class="change-button" href="#">Change</a>
         </div>
-        <a href="change-button">Change</a>
+        <button class="payment-button" href="#">Proceed to payment</button>
+        <a class="cancel-button" href="#">Cancel Order</a>
       </div>
-      <div class="payment-button"><a href="#">Proceed to payment</a></div>
-      <div class="cancel-button"><a href="#">Cancel Order</a></div>
     </div>
-
-    Annual Plan $59.99/year Change
   </body>
 </html>
