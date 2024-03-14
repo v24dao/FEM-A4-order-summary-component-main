@@ -4,28 +4,32 @@
 [Front End Mentor Challenge]() |
 [All my Front End Mentor Solutions](https://github.com/v24dao/Front-End-Mentor-Challenges)
 
+### Challenge Screenshot:
+
+<img src="challenge-screenshot.png" width="300">
+
 ### Main takeaways:
 
 #### 1. Semantics
 
-I changed the `card_title` from a `h1` to a `h3`, since
+After realising that this checkout card would most likely be a small component on a website, I changed some html semantics to reflect this.
 
-#### 2.
+For example, I changed `card__title` from a `h1` to a `h3`.
 
-Note: Mention the challenges that arose with creating buttons with the a/link tag.
+I also encountered some styling issues when trying to create a button using an `a` tag inside of a `div`. This issue was quickly resolved by using the `button` semantic.
 
-For example: Not being able to add height/width/padding etc to links because they are inline elements.
+I have learnt that using the correct semantic tags is not only important from an accessiblity perspective; it could also make styling in CSS easier!
 
-Write notes about inline vs block vs inlineblock
+#### 2. Block vs Inline-Block vs Inline
 
-Also write about the importance of using the `button` semantic. Not only for easier styling, but for accessibility reasons!
+<u>Inline Elements</u>
+An inline element is one that does not start on a new line. It also takes up as little space as possible.
 
-https://www.google.com/search?q=why+can%27t+you+add+padding+or+margin+on+links+css&rlz=1C5CHFA_enGB1087GB1087&oq=why+can%27t+you+add+padding+or+margin+on+links+css&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRifBdIBCDY0NjlqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+We are unable to set a width or height on Inline elements. We are also unable to add Top/Bottom paddings and margins.
 
-https://www.google.com/search?q=why+inline+block+on+buttons&rlz=1C5CHFA_enGB1087GB1087&oq=why+inline+block+on+buttons&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRifBdIBCDM1NjdqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+Examples of inline elements are: `<a>`, `<span>`, `<img>`
 
-https://www.google.com/search?q=are+divs+inline+or+block&rlz=1C5CHFA_enGB1087GB1087&oq=are+divs+inl&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBggBEEUYOTIICAIQABgWGB4yDQgDEAAYhgMYgAQYigUyDQgEEAAYhgMYgAQYigWoAgCwAgA&sourceid=chrome&ie=UTF-8
+<u>Inline Block Elements</u>
+Similar to Inline Elements, Inline-block elements do not start on a new line.
 
-### Challenge Screenshot:
-
-<img src="challenge-screenshot.png" width="300">
+However, we are able to set a width and height on Inline-block elements. Top/Bottom Margins and paddings are also respected on Inline Block elements.
